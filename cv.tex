@@ -1,0 +1,230 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Cory Nance} & \textbf{\today} \\
+Lecturer at Coastal Carolina University \\
+https://github.com/canance \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+	\ressubheading{Dakota State University}{Madison, SD}{D.Sc. in Cyber Security}{2020 (expected)}
+\item
+	\ressubheading{Georgia Southern University}{Statesboro, GA}{M.Sc. Computer Science}{2013}
+	\begin{itemize}
+		\resitem{Strong emphasis on database design and mining.}
+	\end{itemize}
+\item
+	\ressubheading{Coastal Carolina University}{Conway, SC}{B.Sc. Computer Science}{2010}
+
+
+	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item
+	\ressubheading{Coastal Carolina University}{Conway, SC}{Lecturer}{August 2014 - current}
+	\begin{itemize}
+      \resitem{Teaching undergraduate courses in Computer Science, Information Systems, and Information Technology.}
+	\end{itemize}
+\item
+
+\item
+	\ressubheading{Horry-Georgetown Technical College}{Conway, SC}{Systems Administrator}{May 2013 - August 2014}
+	\begin{itemize}
+      \resitem{Provide college-wide and across all campuses, technical support and services in the operation and administration of enterprise-level servers and related infrastructure.}
+      \item Install, configure, and operate a Windows and Linux server environment consisting of physical and virtual (VMware) servers, Storage Area Network (SAN), and related hardware/software.
+      \item Monitor, troubleshoot, and maintain server hardware and storage products; and confer with vendors in diagnosing and correcting errors.
+      \item Assist with maintaining application and support systems including, but not limited to, e-mail system (Exchange), spam filtering, database (SQL Server), user accounts (Active Directory), and domain name service (DNS).
+      \item Assist with implementing the necessary controls, procedures, and best practices for maintaining information security of hardware, server resources, and systems.
+      \item Assist with performing data backup and recovery procedures; and adhere to established retention schedule.
+      \item Assist in researching new technologies and perform other related duties as may be assigned.
+	\end{itemize}
+\item
+
+
+\item
+	\ressubheading{Coastal Carolina University}{Conway, SC}{Teaching Associate}{August 2013 - May 2014}
+	\begin{itemize}
+		\resitem{Teaching undergraduate courses in Computer Science.}
+	\end{itemize}
+	
+\item
+	\ressubheading{Horry-Georgetown Technical College}{Conway, SC}{Adjunct Faculty}{January 2013 - May 2013}
+	\begin{itemize}
+		\resitem{Teaching object-oriented language and design (Java).}
+	\end{itemize}
+	
+\item
+	\ressubheading{Horry-Georgetown Technical College}{Conway, SC}{Applications Analyst}{November 2011 - April 2013}
+	\begin{itemize}
+		\resitem{Provide college-wide technical support in the analysis, design, programming and maintenance of administrative information systems and applications.}
+		\item Write scripts to interface with Ellucian (formerly Sungard) Banner.
+		\item  Report writing from Oracle databases
+		\item Linux server security, updates, and maintenance
+		\item Troubleshoot and update the Continuing Education website
+	\end{itemize}		
+	
+\item
+	\ressubheading{SJGC Associates}{Murrells Inlet, SC}{Software Analyst}{March 2011 - October 2011}
+	\begin{itemize}
+		\resitem{Configure and maintain email and web servers to support email marketing.}
+		\item Migrated email servers from Windows to Linux
+		\item  MS-SQL and MySQL database administration
+		\item Postfix and Courier administration
+		\item Software and web development
+	\end{itemize}	
+	
+	
+\item
+	\ressubheading{Web Data Software, LLC}{North Myrtle Beach, SC}{Software Developer}{September 2010 - September 2011}
+	\begin{itemize}
+		\resitem{Software and web-based development.}
+		\item Develop and interface with web services (SOAP/REST/XML-RPC)
+		\item MS-SQL database administration
+		\item  OAuth integration
+	\end{itemize}	
+	
+\item
+	\ressubheading{Coastal Carolina University}{Conway, SC}{Lab Assistant}{September 2010 - December 2010}
+	\begin{itemize}
+		\resitem{Conducted research for the development of a Robotics class; including DC circuits and using a FPGA to control a DCC train set.}
+	\end{itemize}	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Courses Taught}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+	\item Coastal Carolina University
+	\begin{itemize}
+		\item CSCI 130: Intro to Computer Science
+		\item CSCI 131L: Algorithmic Thinking
+		\item CSCI 135: Introduction To Programming
+		\item CSCI 140: Introduction to Algorithmic Design I
+		\item CSCI 140L: Introduction to Algorithmic Design I Lab
+		\item CSCI 145: Intermediate Programming
+		\item CSCI 150: Introduction to Algorithmic Design II
+		\item CSCI 150L: Introduction to Algorithmic Design II Lab
+		\item CSCI 211: Computer Infrastructure
+		\item CSCI 415: Windows Systems Administration
+		\item CSCI 425: Database Design
+	\end{itemize}
+	\item Horry-Georgetown Technical College
+	\begin{itemize}
+		\item CPT 187: Object-Oriented Logic and Design
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{INSuRE Project}{Madison, SD}{Researcher}{Spring 2017}
+	\begin{itemize}
+		\resitem{Creating an open source script to secure and prevent infections by the Mirai botnet on IoT devices.}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+
+\item Nance, Cory; Losser, Travis; Iype, Reenu; and Harmon, Gary, "NOSQL VS RDBMS - WHY THERE IS ROOM FOR BOTH"
+(2013). SAIS 2013 Proceedings. 27.	
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Grants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item Crystal Cox, Jean French, Clint Fuchs, Sathish Kumar, Michael Murphy, {\bf Cory Nance}, and Tally Wright. "B.S. Information Technology Degree Completion Program." CCU Online Learning Incentive Grant. 2016-2017. \$49,800.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item {\bf Development:} Python (preferred), Java, C/C++, PHP
+
+\item {\bf Technology:} Ansible, Linux administration, Windows Server administration, IDA Pro, WinDbg
+
+\end{itemize}
+
+\end{document}
